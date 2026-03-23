@@ -1,0 +1,15 @@
+# IntelliJ beállítások
+.idea/
+*.iml
+out/
+
+# Backend
+Backend/target/
+Backend/.mvn/
+Backend/mvnw
+Backend/mvnw.cmd
+
+# Frontend
+Frontend/node_modules/
+Frontend/build/
+Frontend/.env.local
