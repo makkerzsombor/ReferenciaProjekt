@@ -18,9 +18,14 @@ function App() {
         <div>
           <h1>Get started</h1>
           <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
           </p>
         </div>
+
+        <div className="bg-red-500 text-white p-4">
+          Tailwind működik
+        </div>
+
         <button
           className="counter"
           onClick={() => setCount((count) => count + 1)}
