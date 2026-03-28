@@ -4,6 +4,7 @@ import Home from "./pages/Home.tsx";
 import {Studies} from "./pages/Studies.tsx";
 import {Skills} from "./pages/Skills.tsx";
 import {Technologies} from "./pages/Technologies.tsx";
+import {AboutMe} from "./pages/AboutMe.tsx";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                 <Route path={"/Studies"} element={<Studies/>}/>
                 <Route path={"/Skills"} element={<Skills/>}/>
                 <Route path={"/Technologies"} element={<Technologies/>}/>
+                <Route path={"/AboutMe"} element={<AboutMe/>}/>
             </Routes>
         </BrowserRouter>
     );

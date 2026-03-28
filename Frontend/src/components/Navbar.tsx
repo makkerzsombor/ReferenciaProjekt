@@ -7,7 +7,7 @@ const Navbar = () => {
             <Link to={"/Skills"} className="text-white p-4">Készségek</Link>
             <Link to={"/Technologies"} className="text-white p-4">Technológiák</Link>
             <Link to={"/Studies"} className="text-white p-4">Korábbi munkahelyek</Link>
-            <Link to={"/Studies"} className="text-white p-4">Rólam</Link>
+            <Link to={"/AboutMe"} className="text-white p-4">Rólam</Link>
         </nav>
     );
 };
