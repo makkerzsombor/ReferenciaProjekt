@@ -1,11 +1,12 @@
-type CardProps =
+export type Skill =
     {
+        id: string;
         name: string;
         description: string;
         expertise: number;
     }
 
-export const SkillCard = ({name, description, expertise}: CardProps) =>
+export const SkillCard = ({name, description, expertise}: Skill) =>
 {
     return(
         <div className="bg-blue-100 flex items-center justify-between p-6 m-4 rounded-md shadow-xl border-2 border-sky-700">
