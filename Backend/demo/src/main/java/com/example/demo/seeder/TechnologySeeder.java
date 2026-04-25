@@ -42,7 +42,7 @@ public class TechnologySeeder implements CommandLineRunner {
             System.out.println("Sikeresen technológia Seedelés!");
 
         } else {
-            System.out.println("Az adatbázis már tartalmaz adatokat, seedelés kihagyva.");
+            System.out.println("Az adatbázis már tartalmaz tech adatokat, seedelés kihagyva.");
         }
     }
 }
