@@ -2,11 +2,13 @@ package com.example.demo.service;
 
 import com.example.demo.dto.SkillDTO;
 import com.example.demo.entity.Skill;
+import com.example.demo.exception.ResourceNotFoundException;
 import com.example.demo.repository.SkillRepositoptory;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class SkillService {
@@ -40,8 +42,20 @@ public class SkillService {
     }
 
     // UPDATE
+    public SkillDTO UpdateSkill(SkillDTO skillDTO) {
+        Optional<Skill> entity = repository.findById(skillDTO.getId());
+        if (!repository.existsById(skillDTO.getId())) {
+            throw new ResourceNotFoundException("Nem található készség módosítása nem lehetséges!");
+        }
+        Skill skillToUpdate = entity.get();
 
+        skillToUpdate.setName(skillDTO.getName());
+        skillToUpdate.setExpertise(skillDTO.getExpertise());
+        skillToUpdate.setDescription(skillDTO.getDescription());
+        return MapToDTO(skillToUpdate);
+    }
 
+    // Segéd fgv
     private SkillDTO MapToDTO(Skill entity) {
         return new SkillDTO(
                 entity.getId(),
