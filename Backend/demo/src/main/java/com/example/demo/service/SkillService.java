@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class SkillService {
@@ -42,7 +43,7 @@ public class SkillService {
     }
 
     // UPDATE
-    public SkillDTO UpdateSkill(SkillDTO skillDTO) {
+    public SkillDTO UpdateSkill(UUID id, SkillDTO skillDTO) {
         Optional<Skill> entity = repository.findById(skillDTO.getId());
         if (!repository.existsById(skillDTO.getId())) {
             throw new ResourceNotFoundException("Nem található készség módosítása nem lehetséges!");
